@@ -1,0 +1,41 @@
+.contact-sec {
+  background-image: url("/assets/images/bg-pattern-dark.png");
+  background-color: var(--dark-grey);
+  background-size: cover;
+  padding: 5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.contact-info-wrapper {
+  background-color: var(--dark-grey);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+
+  > h3 {
+    grid-column: span 2;
+  }
+}
+
+.contact-form-wrapper {
+  background-color: var(--light-green);
+  padding: 2.5rem;
+  color: var(--dark-grey);
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+  padding: 2.5rem;
+}
+
+.contact-info-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --primary-white: #eeeeee;
+  --primary-black: #141414;
+  --dark-grey: #2f2f2f;
+  --light-grey: #bababa;
+  --light-green: #c8cdbd;
+  --grey-see-through: #2f2f2faf;
+
+  --ff-heading: "Libre Baskerville", serif;
+  --ff-body: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+  color: var(--primary-white);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p,
+span,
+a,
+li {
+  font-size: 1rem;
+  font-family: var(--ff-body);
+  color: var(--primary-white);
+}
+
+.light {
+  color: var(--light-green);
+}
+
+.dark {
+  color: var(--primary-black);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-black);
+
+  font-family: var(--ff-heading);
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+}
+
+.menu-link {
+  text-transform: uppercase;
+  color: var(--primary-white);
+  margin-left: 1.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section {
+  width: 100%;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.btn-light {
+  background: var(--light-green);
+  color: var(--primary-black);
+}
+
+.btn-dark {
+  background: var(--dark-grey);
+  color: var(--primary-white);
+}
+
+.btn-bordered {
+  background-color: transparent;
+  border: 1px solid var(--light-grey);
+  color: var(--light-grey);
+}
+
+.sm-grey {
+  color: var(--light-grey);
+  font-size: 0.875rem;
+}
+
+footer {
+  background-color: var(--dark-grey);
+  padding: 2.5rem;
+}
+
+.footer-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.email-input {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--light-grey);
+  color: var(--primary-white);
+}
+
+.divider {
+  height: 0.5px;
+  width: 100%;
+  background-color: var(--light-grey);
+  margin: 1.5rem 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slogan {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav-left {
+  display: flex;
+  gap: 5rem;
+}
+
+.footer-nav-links {
+  display: flex;
+  flex-direction: column;
+  > h5 {
+    margin-bottom: 0.75rem;
+  }
+
+  > a {
+    margin-bottom: 0.5rem;
+    color: var(--light-grey);
+  }
+}
+
+.footer-nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 5rem;
+  max-width: 480px;
+  margin-left: 2.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  > h5 {
+    margin-bottom: 0.5rem;
+    width: fit-content;
+  }
+
+  > div {
+    width: fit-content;
+
+    > a > img {
+      height: 1.5rem;
+      width: auto;
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.footer-company-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  > img {
+    height: 2rem;
+    width: auto;
+    filter: grayscale(100%);
+  }
+  > img:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.footer-bottom {
+  > p {
+    font-size: 0.75rem;
+  }
+}
