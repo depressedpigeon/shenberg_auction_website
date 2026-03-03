@@ -1,4 +1,4 @@
-name: Deploy to Hostinger via SFTP
+name: Deploy to Hostinger via FTPS
 
 on:
   push:
@@ -13,14 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy files via SFTP
+      - name: Deploy files via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
-          protocol: sftp
+          protocol: ftps
           local-dir: ./
           server-dir: ${{ secrets.SFTP_REMOTE_PATH }}
           exclude: |
