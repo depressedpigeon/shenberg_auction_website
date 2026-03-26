@@ -4,6 +4,190 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHENBERG Auction - FAQ</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18035941788"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-18035941788");
+    </script>
+
+    <link rel="stylesheet" href="/assets/stylesheet.css" />
+    <link rel="stylesheet" href="/assets/faq.css" />
+
+    <script src="/assets/index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!-- navigation -->
+    <nav>
+      <a href="/index.html">
+        <img
+          src="/assets/images/shenberg-logo.png"
+          class="logo"
+          alt="SHENBERG Auction Logo"
+        />
+      </a>
+      <div>
+        <a class="menu-link" href="/contact.html">Contact</a>
+        <a
+          class="menu-link"
+          href="https://auction.shenbergs.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Auction</a
+        >
+      </div>
+    </nav>
+
+    <!-- FAQ section -->
+    <section class="faq-sec">
+      <div class="max-width">
+        <div class="header">
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Below you’ll find answers to the most common questions our customers
+            ask. If you can’t find the answer you’re looking for, feel free to
+            contact us for further assistance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-questions">
+      <div class="max-width">
+        <div id="faqContainer"></div>
+      </div>
+    </section>
+    <script src="/data/faq.js" defer></script>
+
+    <!-- cta -->
+    <section class="cta-sec">
+      <div class="cta-wrapper max-width">
+        <h3>Submit your collection for auction</h3>
+        <p>
+          We offer a structured and transparent consignment process, supported
+          by expert evaluation, professional cataloguing, and international
+          exposure through established auction platforms.
+        </p>
+        <a class="btn btn-dark" href="/contact.html">Consign with Us</a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo-wrapper">
+          <img
+            src="assets/images/shenberg-logo.png"
+            class="logo"
+            alt="Shenberg Logo"
+          />
+          <p class="slogan">
+            The mountain of numismatic treasures, where history meets art
+          </p>
+        </div>
+        <div class="footer-email-wrapper">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            enctype="multipart/form-data"
+            class="footer-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="228f8d53-10f9-444f-8c59-ecad93896434"
+            />
+            <input
+              type="hidden"
+              name="message"
+              value="new email subscription"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="email-input"
+              required
+            />
+            <input type="submit" value="Subscribe" class="btn btn-light" />
+            <div id="result"></div>
+          </form>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-nav">
+        <div class="footer-nav-left">
+          <div class="footer-nav-links">
+            <h5>Navigation</h5>
+            <a href="/index.html">Home</a>
+            <a href="/consignment.html">Consign with Us</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-nav-links">
+            <h5>Client Information</h5>
+            <a href="/faq.html">FAQ</a>
+          </div>
+        </div>
+        <div class="footer-nav-right">
+          <div class="social-links">
+            <h5>Find us online</h5>
+            <div>
+              <a
+                href="https://www.youtube.com/@shenberg_auction "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/images/socials/youtube.svg" alt="" />
+              </a>
+              <a
+                href="https://www.facebook.com/coinmk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/images/socials/facebook.svg" alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/shenberg_auction/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/images/socials/instagram.svg" alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/shenberg-auction/ "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="assets/images/socials/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-company-logos">
+            <img src="assets/images/pmg-logo.png" alt="" />
+            <img src="assets/images/ngc-logo.png" alt="" />
+            <img src="assets/images/socials/numisbids-logo.svg" alt="" />
+            <img src="assets/images/socials/sixbid-logo.svg" alt="" />
+            <img src="assets/images/socials/biddr-logo.svg" alt="" />
+            <img src="assets/images/socials/onebid-logo.svg" alt="" />
+            <img src="assets/images/socials/bidspirit-logo.svg" alt="" />
+            <img src="assets/images/socials/numis24-logo.png" alt="" />
+            <img src="assets/images/socials/bidinside-logo.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-bottom">
+        <p>SHENBERG @ 2026. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHENBERG Auction - Contact</title>
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18035941788"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-18035941788");
+    </script>
+
     <link rel="stylesheet" href="/assets/stylesheet.css" />
     <link rel="stylesheet" href="/assets/contact.css" />
 
@@ -24,7 +39,7 @@
         <a class="menu-link" href="/contact.html">Contact</a>
         <a
           class="menu-link"
-          href="https://auction.coinstore.lv/"
+          href="https://auction.shenbergs.com/"
           target="_blank"
           rel="noopener noreferrer"
           >Auction</a
@@ -48,11 +63,19 @@
             <h3 class="light">Contact Information</h3>
             <div class="contact-info-div">
               <h4 class="light">Email:</h4>
-              <p class="light">info@shenberg.com</p>
+              <a class="light" href="mailto:info@shenberg.com"
+                >info@shenberg.com</a
+              >
             </div>
             <div class="contact-info-div">
               <h4 class="light">Phone:</h4>
-              <p class="light">+371 000 00000</p>
+              <a
+                class="light"
+                href="https://wa.me/37129787887"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+371 29 787 887 (WhatsApp)</a
+              >
             </div>
             <div class="contact-info-div">
               <h4 class="light">Address:</h4>
@@ -73,16 +96,69 @@
               questions, please complete the form below. All messages are
               handled with discretion.
             </p>
-            <form action="">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <input type="file" placeholder="Attach a file (optional)" />
-              <textarea placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="228f8d53-10f9-444f-8c59-ecad93896434"
+              />
+              <label class="input-label">
+                <div>
+                  Your Name
+                  <span class="required" aria-hidden="true">*</span>
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </label>
+
+              <label class="input-label">
+                <div>
+                  Your Email <span class="required" aria-hidden="true">*</span>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </label>
+
+              <label class="input-label">
+                <div>
+                  Your Message
+                  <span class="required" aria-hidden="true">*</span>
+                </div>
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </label>
+
+              <!-- <label class="input-label">
+                <div>Attach a file (optional)</div>
+                <input type="file" name="attachment" />
+              </label> -->
+
+              <button class="btn btn-dark" type="submit">Send Message</button>
+
+              <div id="result"></div>
             </form>
             <div class="form-message" id="formMessage"></div>
           </div>
         </div>
+        <p class="light txt-center">
+          All enquiries are treated confidentially. SHENBERG AUCTION does not
+          share client information with third parties without prior consent.
+        </p>
       </div>
     </section>
 
@@ -100,14 +176,31 @@
           </p>
         </div>
         <div class="footer-email-wrapper">
-          <p></p>
-          <form action="#" class="footer-form">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            enctype="multipart/form-data"
+            class="footer-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="228f8d53-10f9-444f-8c59-ecad93896434"
+            />
+            <input
+              type="hidden"
+              name="message"
+              value="new email subscription"
+            />
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               class="email-input"
+              required
             />
             <input type="submit" value="Subscribe" class="btn btn-light" />
+            <div id="result"></div>
           </form>
         </div>
       </div>
@@ -117,7 +210,7 @@
           <div class="footer-nav-links">
             <h5>Navigation</h5>
             <a href="/index.html">Home</a>
-            <a href="/consign.html">Consign with Us</a>
+            <a href="/consignment.html">Consign with Us</a>
             <a href="/contact.html">Contact</a>
           </div>
           <div class="footer-nav-links">
@@ -167,6 +260,8 @@
             <img src="assets/images/socials/biddr-logo.svg" alt="" />
             <img src="assets/images/socials/onebid-logo.svg" alt="" />
             <img src="assets/images/socials/bidspirit-logo.svg" alt="" />
+            <img src="assets/images/socials/numis24-logo.png" alt="" />
+            <img src="assets/images/socials/bidinside-logo.png" alt="" />
           </div>
         </div>
       </div>

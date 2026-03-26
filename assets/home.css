@@ -6,37 +6,48 @@
 .slider {
   position: relative;
   overflow: hidden;
-  height: 30rem;
-  min-height: 320px;
+  /* height: 500px; */
 }
 
 .slides {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   transition: transform 0.6s ease-in-out;
 }
 
 .slide {
   flex: 0 0 100%;
-  background-image: url("/assets/images/placeholder.png");
+  width: 100%;
+  background-color: var(--primary-black);
+  /*
+  background-image: url("/assets/images/banners/Auction-banner-14.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   position: relative;
   display: flex;
   align-items: end;
-  padding: 2rem;
+  padding: 2rem; */
+  > a {
+    flex: 0 0 100%;
+
+    > img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 }
 
-.slide::before {
+/* .slide::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
+} */
 
-.slide-content {
+/* .slide-content {
   position: relative;
   z-index: 2;
   max-width: 720px;
@@ -57,44 +68,40 @@
   margin-bottom: 1rem;
   color: var(--primary-white);
   opacity: 0.95;
+} */
+
+.arrow-div {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .arrow {
+  background-color: var(--grey-see-through);
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
   z-index: 3;
-  color: var(--light-green);
-  width: 2rem;
-  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 2.5rem;
+  padding: 0.25rem;
+  > img {
+    width: 1.5rem;
+    height: auto;
+  }
 }
 
 .arrow.prev {
   right: 4rem;
+  transform: rotate(180deg);
 }
 
 .arrow.next {
-  right: 2rem;
-}
-
-@media (max-width: 720px) {
-  .slide-content {
-    padding: 1rem;
-    margin-left: 4%;
-  }
-  .arrow {
-    /* width: 38px;
-    height: 38px;
-    font-size: 1.25rem; */
-  }
-  .slider {
-    height: 46vh;
-  }
+  right: 1rem;
 }
 
 /* marketing section */
@@ -130,6 +137,7 @@
 }
 
 .auctions {
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
@@ -147,12 +155,59 @@
 }
 
 .auction-card {
-  background:
-    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
-    url("/assets/images/coins-black-bg.png") center/cover;
-
   padding: 1rem;
   color: var(--light-grey);
+  height: 16rem;
+}
+
+/* Prevent long, unbreakable content from forcing the grid to overflow */
+.auction-card,
+.card-contents,
+.card-contents > div {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.lot-1 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/lots/Russia-Sealed-Package-of-100-Uncirculated-Banknotes-1937.jpg")
+      center/cover;
+}
+
+.lot-2 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/custom/Russian-Empire-1-Rouble-1841-year-SPB-NG-Marriage-of-the-heir-to-the-throne-Marriage-of-Grand-Duke-Alexander-Nikolaevich.png")
+      center/cover;
+}
+
+.lot-3 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/custom/Sweden-Russian-Empire-5-Kopecks-1787-year-EM.png")
+      center/cover;
+}
+
+.lot-4 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/custom/Russian-Empire-5-Kopecks-1838-year-SM-Novodel-From-the-collection-of-Count-Emeryk-Hutten-Czapski.png")
+      center/cover;
+}
+
+.lot-5 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/custom/Russian-Empire-1-Rouble-1727-year-SPB.png")
+      center/cover;
+}
+
+.lot-6 {
+  background:
+    linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 79.33%),
+    url("/assets/images/custom/Russian-Empire-1-Rouble-1907-year-\(EB\)-PF-63.png")
+      center/cover;
 }
 
 .card-contents {
@@ -161,9 +216,27 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 6rem;
-  > .btn {
-    width: 100%;
-  }
+}
+
+/* Ensure the title stays on one line and shows an ellipsis when overflowing */
+.card-contents > div {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.card-contents > div > h4,
+.auction-card h4 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0; /* keep spacing consistent */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card-contents > .btn {
+  width: 100%;
 }
 
 .date {
@@ -271,6 +344,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: center;
 }
 
 .yt-desc-wrapper {
@@ -291,19 +365,73 @@
   }
 }
 
-.cta-sec {
-  background-image: url("/assets/images/bg-pattern-dark.png");
-  background-color: var(--dark-grey);
-  background-size: cover;
-  padding: 7.5rem;
+@media (max-width: 1000px) {
+  .marketing-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .latest-auctions-sec,
+  .youtube-videos-sec {
+    padding: 4rem 2rem;
+  }
+
+  .yt-desc-wrapper {
+    padding: 0;
+    grid-column: span 2;
+  }
 }
 
-.cta-wrapper {
-  background-color: var(--light-grey);
-  padding: 2.5rem;
-  > h3,
-  p {
-    color: var(--primary-black);
-    margin-bottom: 1rem;
+@media (max-width: 700px) {
+  .auctions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .auctions-desc {
+    padding: 1rem 0;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-contents {
+    gap: 0.25rem;
+  }
+
+  .marketing-wrapper {
+    /* grid-template-columns: 1fr; */
+    padding: 2rem;
+    align-items: end;
+  }
+
+  .marketing-wrapper > div {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .auctions {
+    grid-template-columns: 1fr;
+  }
+
+  .auctions-desc {
+    grid-column: span 1;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 0m;
+  }
+
+  .info-wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .yt-videos-wrapper {
+    grid-template-columns: auto;
+    gap: 1.5rem;
+  }
+
+  .yt-desc-wrapper {
+    grid-column: span 1;
   }
 }
